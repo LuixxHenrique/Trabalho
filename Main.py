@@ -13,6 +13,7 @@ class Main:
                             '- Listar Produtos\n3'
                             '- Alterar Valor\n4'
                             '- Alterar Descricao\n5'
+                            '- Excluir Produto\n0'
                             '- Sair')
 
             if entrada == '1':
@@ -24,6 +25,9 @@ class Main:
             elif entrada == '4':
                 estoque.alterar_descricao()
             elif entrada == '5':
+                cod = int(input('Informe o código do Produto: '))
+                estoque.exclui_produto(cod)
+            elif entrada == '0':
                 break
             else:
-                print('Opção Incorreta!')
+                print('Entrada Incorreta!')

@@ -1,6 +1,7 @@
 from Listados import *
 
 
+
 class Estoque:
     def __init__(self):
         self.cadastrar = []
@@ -16,9 +17,9 @@ class Estoque:
 
     def listar_produtos(self):
         for i in range(len(self.cadastrar)):
-            print('Codigo:', self.cadastrar[0].cod,
-                  '- Valor:', self.cadastrar[0].valoruni,
-                  '- Descricao:', self.cadastrar[0].descricao)
+            print('Codigo:', self.cadastrar[i].cod,
+                  '- Valor:', self.cadastrar[i].valoruni,
+                  '- Descricao:', self.cadastrar[i].descricao)
 
     def alterar_valor(self):
         entrada = input('Informe o codigo do produto: ')
@@ -26,7 +27,7 @@ class Estoque:
             if entrada == self.cadastrar[i].cod:
                 self.cadastrar[i].valoruni = input('Novo valor: ')
             else:
-                print('Codigo de Produto nao Existe!')
+                print('Valor Alterado!')
 
     def alterar_descricao(self):
         entrada = input('Informe o Codigo do Produto: ')
@@ -34,4 +35,11 @@ class Estoque:
             if entrada == self.cadastrar[i].cod:
                 self.cadastrar[i].descricao = input('Nova Descricao: ')
             else:
-                print('Codigo de Produto nao Existe!')
+                print('Descrição Alterada!')
+
+    def exclui_produto(self, cod):
+        for i in range(len(self.cadastrar)):
+            if cod == self.cadastrar[i].cod:
+                str(self.cadastrar[i].remove)
+            else:
+                print('Codigo Removido!')
